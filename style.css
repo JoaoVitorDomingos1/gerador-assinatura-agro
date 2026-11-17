@@ -1,0 +1,103 @@
+:root {
+    --azul-grupoAgro: #254391;
+    --verde-grupoAgro: #29a537;
+    --fundo: #f5f7fb;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 40px 24px;
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--azul-grupoAgro);
+}
+
+.marca {
+    color: var(--verde-grupoAgro);
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+
+main {
+    max-width: 1280px;
+    margin: auto;
+    padding: 36px;
+    background: #fff;
+    border-top: 5px solid var(--azul-grupoAgro);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px #26326512;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 720px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+input, select {
+    font: inherit;
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #778297;
+    width: 100%;
+}
+
+button {
+    background-color: var(--azul-grupoAgro);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #222969;
+}
+
+#assinatura:not(:empty) {
+    margin-top: 28px;
+}
+
+#assinatura canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 540px) {
+    body {
+        padding: 12px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
+
+input:focus,
+select:focus {
+    outline: 3px solid var(--verde-grupoAgro);
+    outline-offset: 3px;
+}
+
+#baixar {
+    max-width: 300px;
+}
+
+[hidden] {
+    display: none !important;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Agro - Assinatura de E-mail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <p class="marca">GRUPO AGRO</p>
+    <h1>Assinatura de E-mail</h1>
+
+    <form id="formulario">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" required>
+
+        <label for="cargo">Seu cargo:</label>
+        <input type="text" id="cargo" required>
+
+        <label for="tel">Digite seu telefone:</label>
+        <input type="tel" id="tel">
+
+        <label for="uf">Selecione o Estado:</label>
+        <select id="uf" required>
+            <option value="">Selecione seu Estado</option>
+            <option value="BA">BA</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MG">MG</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="PA">PA</option>
+            <option value="PI">PI</option>
+            <option value="RO">RO</option>
+            <option value="TO">TO</option>
+        </select>
+ 
+        <label for="unid">Selecione a unidade de Trabalho:</label>
+        <select id="unid" required>
+            <option value="">Selecione sua Unidade</option>
+        </select>
+
+        <button type="submit">Gerar PNG</button>
+    </form>
+
+    <div id="assinatura"></div>
+
+    <button type="button" id="baixar" hidden>Baixar PNG</button>
+    </main>
+
+    <script src="unidades.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
