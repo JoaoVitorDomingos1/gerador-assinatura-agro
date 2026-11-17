@@ -40,34 +40,36 @@ let imagemPNG;
        let areaAssinatura = document.getElementById("assinatura");
 
        let canvas = document.createElement("canvas");
-           canvas.width = 1200;
-           canvas.height = 300;
 
         let ctx = canvas.getContext("2d");
          
         let imagem = new Image();
             imagem.onload = function() {
 
-               ctx.drawImage(imagem, 0, 0, 1200, 300);
-               ctx.fillStyle = "#254391";
+              canvas.width = imagem.naturalWidth;
+              canvas.height = imagem.naturalHeight;
+
+              ctx.drawImage(imagem, 0, 0);
+              ctx.fillStyle = "#15411a";
                
-               ctx.font = "bold 24px Arial";
-               ctx.fillText(nome, 54, 70);
+              ctx.font = "bold 90px Arial";
+              ctx.fillText(nome, 196, 240);
 
-               ctx.font = "16px Arial";
-               ctx.fillText(cargo, 54, 95);
+              ctx.font = "72px Arial";
+              ctx.fillText(cargo, 196, 340);
 
-               ctx.font = "bold 20px Arial";
-               ctx.fillText(tel, 54, 165);
+              ctx.font = "bold 80px Arial";
+              ctx.fillText(tel, 196, 480);
 
-              ctx.font = "16px Arial";
-              ctx.fillText(`${unidades[uf][unid].nome} / ${uf}`, 350, 70);
+              ctx.fillStyle = "#96ff71";
+              ctx.font = "42px Arial";
+              ctx.fillText(`${unidades[uf][unid].nome} / ${uf}`, 196, 620);
 
-              ctx.font = "16px Arial";
-             ctx.fillText(escolha, 350, 95);
+              ctx.font = "56px Arial";
+              ctx.fillText(escolha, 196, 690);
 
-             imagemPNG = canvas.toDataURL("image/png");
-             botaoBaixar.hidden = false;
+              imagemPNG = canvas.toDataURL("image/png");
+              botaoBaixar.hidden = false;
             };
 
             imagem.src = "Teste Agro.png";
